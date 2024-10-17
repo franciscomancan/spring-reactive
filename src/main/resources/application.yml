@@ -1,0 +1,19 @@
+spring:
+  data:
+    r2dbc:
+      repositories:
+        enabled: true
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/postgres
+    username: *****
+    password: *****
+  # openAI
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+
+logging:
+  level:
+    org:
+      springframework:
+        r2dbc=DEBUG:
